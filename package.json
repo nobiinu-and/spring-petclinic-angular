@@ -27,15 +27,17 @@
     "md2": "0.0.28",
     "rxjs": "^5.4.2",
     "tether": "^1.4.0",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "applicationinsights-js": "^1.0.8"
   },
   "devDependencies": {
-    "@angular/cli": "^1.4.2",
+    "@angular/cli": "^1.5.4",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
+    "@types/applicationinsights-js": "^1.0.2",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "^6.0.88",
+    "@types/node": "^6.0.92",
     "codelyzer": "~3.1.1",
     "jasmine-core": "^2.6.4",
     "jasmine-spec-reporter": "^4.1.1",
@@ -48,6 +50,7 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "webpack": "^3.8.1"
   }
 }

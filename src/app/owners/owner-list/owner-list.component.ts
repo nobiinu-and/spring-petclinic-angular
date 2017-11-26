@@ -20,11 +20,12 @@
  * @author Vitaliy Fedoriv
  */
 
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ReflectiveInjector} from '@angular/core';
 import {OwnerService} from '../owner.service';
 import {Owner} from '../owner';
 import 'rxjs/Rx';
 import {Router} from '@angular/router';
+import {MyMonitoringService} from '../../monitoring/monitoring.service';
 
 @Component({
   selector: 'app-owner-list',
@@ -35,7 +36,14 @@ export class OwnerListComponent implements OnInit {
   errorMessage: string;
   owners: Owner[];
 
+  private myMonitoringService: MyMonitoringService;
+
   constructor(private router: Router, private ownerService: OwnerService) {
+    const injector = ReflectiveInjector.resolveAndCreate([
+      MyMonitoringService
+    ]);
+    this.myMonitoringService = injector.get(MyMonitoringService);
+    this.myMonitoringService.logPageView(this.constructor.name);
   }
 
   ngOnInit() {
