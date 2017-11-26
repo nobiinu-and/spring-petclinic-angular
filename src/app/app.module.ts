@@ -33,9 +33,9 @@ import {PetTypesModule} from './pettypes/pettypes.module';
 import {VetsModule} from './vets/vets.module';
 import {PartsModule} from './parts/parts.module';
 import {SpecialiesModule} from './specialties/specialies.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Md2Module } from 'md2';
-
+import {MonitoringModule} from './monitoring/monitoring.module';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,8 @@ import { Md2Module } from 'md2';
     PartsModule,
     Md2Module,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MonitoringModule
   ],
   providers: [],
   bootstrap: [AppComponent]

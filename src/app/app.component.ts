@@ -21,6 +21,8 @@
  */
 
 import {Component} from '@angular/core';
+import { Router, NavigationStart } from '@angular/router';
+import { MyMonitoringService } from 'app/monitoring/monitoring.service';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +31,12 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
-//  constructor() {
-//  }
+  constructor(router: Router, private myMonitoringService: MyMonitoringService) {
+    router.events
+    .filter((event) => event instanceof NavigationStart)
+    .subscribe((event: NavigationStart) => {
+      this.myMonitoringService.logPageView(event.url);
+    });
+  }
 
 }
