@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "prebuild": "tsc --outDir dist scripts/prebuild.ts && node dist/prebuild.js",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",

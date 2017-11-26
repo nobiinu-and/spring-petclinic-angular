@@ -2,10 +2,10 @@
 
 ####**Angular frontend for Spring Petclinic.**
 
-Warning: **client only**. 
+Warning: **client only**.
   Use REST API from backend [spring-petclinic-rest project](https://github.com/spring-petclinic/spring-petclinic-rest)
   You need start backend server before start frontend application.
-  
+
 
 ## Installation
 1. Update angular-cli to latest version (1.4.2 current)
@@ -25,6 +25,10 @@ Install local project package
 npm install --save-dev @angular/cli@latest
 if npm version > 5.0 delete package-lock.json file  ( bug - this file prevent correct packages install)
 npm install
+````
+Generate environment.ts to inject Application Insights Instrumention Key (Only dev, prod is not support)
+````
+AZUREAI_INSTRUMENTION_KEY=xxxx-xxxx-xxxx-xxxx npm run prebuild
 ````
 
 Now project use Angular CLI v.1.4.2 and Angular v.4.4.
